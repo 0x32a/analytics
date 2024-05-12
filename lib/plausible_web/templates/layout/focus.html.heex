@@ -13,43 +13,15 @@
       <meta name="csrf-token" content={Plug.CSRFProtection.get_csrf_token()} />
       <meta name="websocket-url" content={websocket_url()} />
     <% end %>
-    <PlausibleWeb.Components.Layout.favicon conn={@conn} />
-    <title><%= assigns[:title] || "Plausible · Web analytics" %></title>
+    <title><%= assigns[:title] || "x32.gen.in" %></title>
     <link rel="stylesheet" href={Routes.static_path(@conn, "/css/app.css")} />
     <%= render("_tracking.html", assigns) %>
   </head>
   <body class="flex flex-col h-full bg-gray-100 dark:bg-gray-900">
-    <div class="w-full mt-12 text-center">
-      <a href={home_dest(@conn)}>
-        <%= img_tag(
-          PlausibleWeb.Router.Helpers.static_path(
-            @conn,
-            logo_path("logo_dark.svg")
-          ),
-          class: "w-44 hidden dark:inline",
-          alt: "Plausible logo",
-          loading: "lazy"
-        ) %>
-        <%= img_tag(
-          PlausibleWeb.Router.Helpers.static_path(
-            @conn,
-            logo_path("logo_light.svg")
-          ),
-          class: "w-44 inline dark:hidden",
-          alt: "Plausible logo",
-          loading: "lazy"
-        ) %>
-      </a>
-    </div>
-
     <%= if assigns[:flash] do %>
       <%= render("_flash.html", assigns) %>
     <% end %>
     <%= @inner_content %>
-
-    <p class="text-center text-gray-500 text-xs py-8">
-      © <%= DateTime.utc_now().year() %> Plausible Analytics. All rights reserved.
-    </p>
 
     <PlausibleWeb.Components.Layout.theme_script current_user={assigns[:current_user]} />
 
