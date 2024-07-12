@@ -16,6 +16,13 @@
   }
 }
 
+@font-face {
+	font-family: "Text";
+	src: url("https://file.q00.dev/uploads/1720819609367-PPRadioGrotesk-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
 .button {
   @apply inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md leading-5 transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
   background-color: #2563eb !important;
@@ -153,6 +160,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width:100vw;  /* Prevents content from jumping when scrollbar is added/removed due to vertical overflow */
   overflow-x: hidden;
+  font-family: Text !important;
 }
 
 blockquote {

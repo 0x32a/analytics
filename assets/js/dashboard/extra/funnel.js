@@ -173,7 +173,7 @@ export default function Funnel(props) {
     }
 
     // passing those verbatim to make sure canvas rendering picks them up
-    var fontFamily = 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+    var fontFamily = '"Text", sans-serif'
 
     var gradient = ctx.createLinearGradient(900, 0, 900, 900);
     gradient.addColorStop(1, palette.dropoffBackground);

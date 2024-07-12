@@ -16,7 +16,7 @@
     <mj-section padding="25px 0 0 0">
       <mj-column>
         <mj-text mj-class="text-sm" height="40px">
-          x32
+          q00
         </mj-text>
         <mj-text mj-class="text-lg">
           <%= @site.domain %>

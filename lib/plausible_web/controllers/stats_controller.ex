@@ -370,6 +370,6 @@ defmodule PlausibleWeb.StatsController do
   end
 
   defp title(_conn, site) do
-    "x32 · " <> site.domain
+    "q00 · " <> site.domain
   end
 end

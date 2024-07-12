@@ -13,7 +13,7 @@
       <meta name="csrf-token" content={Plug.CSRFProtection.get_csrf_token()} />
       <meta name="websocket-url" content={websocket_url()} />
     <% end %>
-    <title><%= assigns[:title] || "x32.gen.in" %></title>
+    <title><%= assigns[:title] || "q00.dev" %></title>
     <link rel="stylesheet" href={Routes.static_path(@conn, "/css/app.css")} />
     <%= render("_tracking.html", assigns) %>
   </head>
